@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background 0.3s;
+  }
+  
+  /* Theme backgrounds */
+  body.light {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+  }
+  body.dark {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+  }
+  body.blue {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+  }
+  body.green {
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+  }
+  body.pink {
+    background: linear-gradient(to right, #fcb6c5, #fceabb);
+  }
+  
+  /* Calculator container */
+  .calculator {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Display screen */
+  #display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button grid */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: #e0e0e0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 0 5px #00000033;
+  }
+  
+  .zero {
+    grid-column: span 2;
+  }
+  
+  /* Theme styles */
+  body.light .calculator {
+    background: #fff;
+    color: #000;
+  }
+  body.dark .calculator {
+    background: #1e1e1e;
+    color: #fff;
+  }
+  body.blue .calculator {
+    background: #e0f7fa;
+    color: #006064;
+  }
+  body.green .calculator {
+    background: #f1f8e9;
+    color: #33691e;
+  }
+  body.pink .calculator {
+    background: #fce4ec;
+    color: #880e4f;
+  }
+  
+  body.light button {
+    background: #e0e0e0;
+    color: #000;
+  }
+  body.dark button {
+    background: #2f2f2f;
+    color: #fff;
+  }
+  body.blue button {
+    background: #b2ebf2;
+    color: #006064;
+  }
+  body.green button {
+    background: #dcedc8;
+    color: #33691e;
+  }
+  body.pink button {
+    background: #f8bbd0;
+    color: #880e4f;
+  }
+  
+  /* Dropdown style */
+  #theme-select {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Hacker Secret Theme */
+  body.hacker {
+    background: black;
+    color: #00ff00;
+  }
+  
+  body.hacker .calculator {
+    background: #000;
+    color: #0f0;
+    box-shadow: 0 0 15px #00ff00;
+  }
+  
+  body.hacker button {
+    background: #111;
+    color: #0f0;
+    box-shadow: 0 0 5px #00ff00;
+  }
+  
+  body.hacker #display {
+    background: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+  }
+  
+  /* Optional Matrix background overlay */
+  body.hacker::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif');
+    background-size: cover;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  #reset-theme-btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  #reset-theme-btn:hover {
+    background: #222;
+  }
+  
